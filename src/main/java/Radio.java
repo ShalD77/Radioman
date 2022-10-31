@@ -59,9 +59,6 @@ public class Radio {
         if (soundVolume < 0) {
             return;
         }
-        if (soundVolume > 10) {
-            return;
-        }
         this.soundVolume = soundVolume;
 
     }

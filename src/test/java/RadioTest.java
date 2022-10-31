@@ -189,31 +189,11 @@ public class RadioTest {
         Assertions.assertEquals(expected, actual);
     }
 
-    @Test
-    public void volume11() {
-        Radio radio = new Radio();
-        radio.setSoundVolume(11);
-
-
-        int expected = 10;
-        int actual = radio.getSoundVolume();
-        Assertions.assertEquals(expected, actual);
-    }
 
     @Test
     public void volumeNext() {
         Radio radio = new Radio();
         radio.setSoundVolume(10);
-        radio.nextVolume();
-
-        int expected = 10;
-        int actual = radio.getSoundVolume();
-        Assertions.assertEquals(expected, actual);
-    }
-    @Test
-    public void volumeNext10() {
-        Radio radio = new Radio();
-        radio.setSoundVolume(11);
         radio.nextVolume();
 
         int expected = 10;
