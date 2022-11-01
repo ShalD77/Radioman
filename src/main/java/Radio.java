@@ -1,13 +1,25 @@
 public class Radio {
-    public int radioSurveillanceNumber;
-    public int soundVolume;
+    private int radioSurveillanceNumber;
+    private int soundVolume;
+    private int maxStation;
+
+    public Radio() {
+maxStation = 9;
+
+    }
+
+    public Radio(int stationsCount){
+maxStation = stationsCount -1;
+
+    }
+
 
     public void nextVolume(){
-        if (soundVolume <10){
+        if (soundVolume <100){
             soundVolume++;
         }
         else {
-            soundVolume = 10;
+            soundVolume = 100;
         }
     }
     public void previousVolume(){
@@ -20,7 +32,7 @@ public class Radio {
     }
 
     public void next() {
-        if (radioSurveillanceNumber < 9) {
+        if (radioSurveillanceNumber < maxStation) {
             radioSurveillanceNumber++;
         } else {
             radioSurveillanceNumber = 0;
@@ -31,7 +43,7 @@ public class Radio {
         if (radioSurveillanceNumber > 0) {
             radioSurveillanceNumber--;
         } else {
-            radioSurveillanceNumber = 9;
+            radioSurveillanceNumber = maxStation;
         }
     }
 
@@ -59,6 +71,8 @@ public class Radio {
         if (soundVolume < 0) {
             return;
         }
+
+
         this.soundVolume = soundVolume;
 
     }
